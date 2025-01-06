@@ -7,7 +7,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         gix_object::find::Never, // Can also use: repo.objects.clone()
         &gix::progress::Discard,
         &gix::progress::Discard,
-        &gix::interrupt::IS_INTERRUPTED,
+        &Default::default(),
         Default::default(),
     )?;
     Ok(())
