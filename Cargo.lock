@@ -94,6 +94,7 @@ name = "checkout-index"
 version = "0.1.0"
 dependencies = [
  "gix",
+ "gix-object",
 ]
 
 [[package]]
