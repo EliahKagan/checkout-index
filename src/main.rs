@@ -10,7 +10,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         &Default::default(),
         gix::worktree::state::checkout::Options {
             destination_is_initially_empty: true,
-            overwrite_existing: false,
             ..Default::default()
         },
     )?;
