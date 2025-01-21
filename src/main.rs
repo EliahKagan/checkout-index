@@ -8,7 +8,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         &gix::progress::Discard,
         &gix::progress::Discard,
         &Default::default(),
-        Default::default(),
+        gix::worktree::state::checkout::Options {
+            overwrite_existing: true,
+            ..Default::default()
+        },
     )?;
     Ok(())
 }
